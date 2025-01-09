@@ -6,6 +6,7 @@
 
 public class Restauranty {
     public static void main(String[] args) throws Exception {
-        System.out.println("Welcome to restaurant!!!!!!");
+        System.out.println("Welcome to the restaurant!!!!!!");
+        
     }
 }
