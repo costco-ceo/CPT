@@ -1,6 +1,6 @@
 /*
- * author: Maria Alampay
- * date: 09/01/2025
+ * author: Maria Alampay!
+ * date: 10/09/2025
  * Restaurant class 
  */
 
