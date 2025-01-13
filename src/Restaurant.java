@@ -21,16 +21,14 @@ public class Restaurant {
         System.out.println("Great! Please be seated at Table 4, I'll bring out the menu."); // can I generate random numbers for tables between 1-14??? (maybe)
         
         inp = input.nextLine();
+        Menu.showMenu(); //show each cat instead
         if(inp.equals("ready")){
             System.out.println("What appetizer would you like to start with?");
         }
-        String Goodbye = input.nextLine();
-        if(Goodbye.equals("exit")){
-            System.out.println("Goodbye!");
-        }
-        // this ^^^ still doesnt work but ill fix it later
 
 
         
+
+
     }
-}  
+}
