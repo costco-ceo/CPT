@@ -11,6 +11,10 @@ public class Menu {
         Scanner input = new Scanner(System.in);
         String sodaChoice = "Soda";
         String alcoholChoice = "Alcohol";
+        double totalPrice = 0;
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+    
         
         //appetizers
         System.out.println("[1] Garden Salad - contains chicken, tomatoes, cucumbers, read onions. $13.65");
@@ -50,7 +54,6 @@ public class Menu {
             case "1": 
                 System.out.println("You selected Garden Salad.");
                 totalPrice += 13.65;
-                //appetizers = 1; //change bc cant set appetizers as 1 
                 break;
             case "2":
                 System.out.println("You selected Pan Seared Scallops.");
@@ -64,46 +67,65 @@ public class Menu {
             default:
                 System.out.println("Invalid appetizer selection.");
         }
+
         switch (drinks) {
             case "1":
+            System.out.println("You selected Water.");
                 break;
                 //switch(sodaChoice){}
             case "2":
+            System.out.println("You selected Soda.");
                 break;
             case "3":
+            System.out.println("You selected Juice.");
                 break;
                 //switch(alcoholChoice){}
             case "4":
-                break;
+            System.out.println("You selected Alcohol.");
+            if (age >= 19) {
+                System.out.println("You selected Alcohol.");
+            } else {
+                System.out.println("Sorry, you must be at least 19 years old to order alcohol.");
+            }   break;
             default:
                 System.out.println("Invalid drink selection.");
         }
         
         switch (entrée) {
             case "1":
+            System.out.println("You selected Pan seared Salmon.");
                 break;
             case "2":
+            System.out.println("You selected Truffle Carbonara.");
                 break;
             case "3":
+            System.out.println("You selected Pan seared Filet Mignon and Butter Poached Lobster.");
                 break;
             case "4":
+            System.out.println("You selected Spicy Shrimp with rice.");
                 break;
             default:
                 System.out.println("Invalid entrée selection.");
         }
+
         switch (desserts) {
             case "1":
+            System.out.println("You selected Chocolate Lava Cake.");
                 break;
             case "2":
+            System.out.println("You selected Chocolate Soufflé.");
                 break;
             case "3":
+            System.out.println("You selected Creme Brulee.");
                 break;
             //switch(icecreameChoice)
             case "4": 
+            System.out.println("You selected Ice Cream.");
                 break;
             default:
                 System.out.println("Invalid dessert selection.");
         }
+
         System.out.println("You are ordering: " + appetizers + drinks + entrée + desserts + ".");
     }
 }
