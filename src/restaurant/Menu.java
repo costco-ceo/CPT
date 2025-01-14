@@ -1,3 +1,5 @@
+package restaurant;
+
 /*
  * author: Maria Alampay
  * date: 13/01/2025

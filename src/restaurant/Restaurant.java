@@ -1,3 +1,5 @@
+package restaurant;
+
 /*
  * author: Maria Alampay!
  * date: 10/01/2025
@@ -8,7 +10,7 @@
  import java.util.Random;
 
  public class Restaurant {
-    public static void Menu(){
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Restaurant, how many people are in your party?"); // will change the name later but for now it is 'Restaurant'
         
@@ -22,6 +24,7 @@
         System.out.println("Great! Please be seated at Table 4, I'll bring out the menu."); // can I generate random numbers for tables between 1-14??? (maybe)
         
         inp = input.nextLine();
+        //showMenu;
         if(inp.equals("ready")){
             System.out.print("Select an appetizer (1-4): ");
         }
