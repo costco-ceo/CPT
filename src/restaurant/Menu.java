@@ -13,7 +13,8 @@ public class Menu {
         Scanner input = new Scanner(System.in);
         double totalPrice = 0;
         //System.out.print("Enter your age: ");
-        int age = input.nextInt(); 
+        //int age = input.nextInt();
+        //input.nextLine();  // Flush buffer
         String juiceChoice = "Juice";
         String alcoholChoice = "Alcohol";
         String sodaChoice = "Soda";
@@ -81,12 +82,12 @@ public class Menu {
 
         switch (drinks) {
             case "1":
-            System.out.println("You selected Water.");
-            totalPrice += 0;
+                System.out.println("You selected Water.");
+                totalPrice += 0;
                 break;
             case "2":
-            System.out.println("You selected Soda.");
-            System.out.println("Please select a soda flavor:");
+                System.out.println("You selected Soda.");
+                System.out.println("Please select a soda flavor:");
                 System.out.println("[1] Ice Tea");
                 System.out.println("[2] Sprite");
                 System.out.println("[3] Crush");
@@ -104,11 +105,14 @@ public class Menu {
                         break;
                     case "4":
                         System.out.println("You selected Coke Cola.");
-            totalPrice += 2.35;
-                break;
+                        totalPrice += 2.35;
+                        break;
+                    default:
+                        System.out.println("Invalid soda choice.");
                 }
+                break;
             case "3":
-            System.out.println("You selected Juice.");
+                System.out.println("You selected Juice.");
                 System.out.println("Please select a juice flavor:");
                 System.out.println("[1] Orange");
                 System.out.println("[2] Mango");
@@ -127,106 +131,114 @@ public class Menu {
                         break;
                     case "4":
                         System.out.println("You selected Fruit punch.");
-            totalPrice += 1.50;
-                break;
+                        totalPrice += 1.50;
+                        break;
+                    default:
+                        System.out.println("Invalid juice choice.");
                 }
+                break;
+                
             case "4":
                 //figure out how to do switch case inside with the if statements
-                System.out.print("Enter your age: "); 
-            if (age >= 19) {
                 System.out.println("You selected Alcohol.");
-                System.out.println("Please select a Alcoholic beverage:");
-                System.out.println("[1] Wine");
-                System.out.println("[2] Champagne");
-                System.out.println("[3] Whisky");
-                System.out.println("[4] Cocktail"); 
-                //String juiceChoice = input.nextLine();
-                switch (alcoholChoice) {
-                    case "1":
-                        System.out.println("You selected Wine.");
-                        break;
-                    case "2":
-                        System.out.println("You selected Champagne.");
-                        break;
-                    case "3":
-                        System.out.println("You selected Whisky.");
-                        break;
-                    case "4":
-                        System.out.println("You selected Cocktail.");
-            totalPrice += 13.65;
-                break;
-                }
-            } else {
-                System.out.println("Sorry, you must be at least 19 years old to order alcohol.");
-            }   break;
-            default:
-                System.out.println("Invalid drink selection.");
-            }
-
-            switch (entrée) {
-                case "1":
-                System.out.println("You selected Pan seared Salmon.");
-                totalPrice += 13.65;
-                    break;
-                case "2":
-                System.out.println("You selected Truffle Carbonara.");
-                totalPrice += 13.65;
-                    break;
-                case "3":
-                System.out.println("You selected Pan seared Filet Mignon and Butter Poached Lobster.");
-                totalPrice += 13.65;
-                    break;
-                case "4":
-                System.out.println("You selected Spicy Shrimp with rice.");
-                totalPrice += 13.65;
-                    break;
-                default:
-                    System.out.println("Invalid entrée selection.");
-            }
-    
-            switch (desserts) {
-                case "1":
-                System.out.println("You selected Chocolate Lava Cake.");
-                totalPrice += 13.65;
-                    break;
-                case "2":
-                System.out.println("You selected Chocolate Soufflé.");
-                totalPrice += 13.65;
-                    break;
-                case "3":
-                System.out.println("You selected Creme Brulee.");
-                totalPrice += 13.65;
-                    break;
-                case "4": 
-                    // Inside switch for ice cream choice
-                    //gpty showed me how to do the switch case inside the main switch case
-                    System.out.println("You selected Ice Cream.");
-                    System.out.println("Please select an ice cream flavor:");
-                    System.out.println("[1] Vanilla");
-                    System.out.println("[2] Chocolate");
-                    System.out.println("[3] Strawberry");
-                    System.out.println("[4] Mint"); 
-                    //String icecreameChoice = input.nextLine();
-                    switch (iceCreamChoice) {
+                System.out.print("Enter your age: ");
+                int age = input.nextInt();
+                input.nextLine(); // flush 
+                if (age >= 19) {
+                    System.out.println("Please select a Alcoholic beverage:");
+                    System.out.println("[1] Wine");
+                    System.out.println("[2] Champagne");
+                    System.out.println("[3] Whisky");
+                    System.out.println("[4] Cocktail"); 
+                    switch (alcoholChoice) {
                         case "1":
-                            System.out.println("You selected Vanilla Ice Cream.");
+                            System.out.println("You selected Wine.");
                             break;
                         case "2":
-                            System.out.println("You selected Chocolate Ice Cream.");
+                            System.out.println("You selected Champagne.");
                             break;
                         case "3":
-                            System.out.println("You selected Strawberry Ice Cream.");
+                            System.out.println("You selected Whisky.");
                             break;
                         case "4":
-                            System.out.println("You selected Mint Ice Cream.");
-                totalPrice += 13.65;
+                            System.out.println("You selected Cocktail.");
+                            totalPrice += 13.65;
                     break;
-                default:
-                    System.out.println("Invalid dessert selection.");
                     }
+                } else {
+                    System.out.println("Sorry, you must be at least 19 years old to order alcohol.");
+                }   break;
+                default:
+                    System.out.println("Invalid drink selection.");
+            break;
+            }
     
-            System.out.println("You are ordering: " + appetizers + drinks + entrée + desserts + ".");
-            System.out.println("Total Price: $" + totalPrice);
+        switch (entrée) {
+            case "1":
+            System.out.println("You selected Pan seared Salmon.");
+            totalPrice += 13.65;
+                break;
+            case "2":
+            System.out.println("You selected Truffle Carbonara.");
+            totalPrice += 13.65;
+                break;
+            case "3":
+            System.out.println("You selected Pan seared Filet Mignon and Butter Poached Lobster.");
+            totalPrice += 13.65;
+                break;
+            case "4":
+            System.out.println("You selected Spicy Shrimp with rice.");
+            totalPrice += 13.65;
+                break;
+            default:
+                System.out.println("Invalid entrée selection.");
+                break;
+        }
+    
+        switch (desserts) {
+            case "1":
+            System.out.println("You selected Chocolate Lava Cake.");
+            totalPrice += 13.65;
+                break;
+            case "2":
+            System.out.println("You selected Chocolate Soufflé.");
+            totalPrice += 13.65;
+                break;
+            case "3":
+            System.out.println("You selected Creme Brulee.");
+            totalPrice += 13.65;
+                break;
+            case "4": 
+                // Inside switch for ice cream choice
+                //gpty showed me how to do the switch case inside the main switch case
+                System.out.println("You selected Ice Cream.");
+                System.out.println("Please select an ice cream flavor:");
+                System.out.println("[1] Vanilla");
+                System.out.println("[2] Chocolate");
+                System.out.println("[3] Strawberry");
+                System.out.println("[4] Mint"); 
+                //String icecreameChoice = input.nextLine();
+                switch (iceCreamChoice) {
+                    case "1":
+                        System.out.println("You selected Vanilla Ice Cream.");
+                        break;
+                    case "2":
+                        System.out.println("You selected Chocolate Ice Cream.");
+                        break;
+                    case "3":
+                        System.out.println("You selected Strawberry Ice Cream.");
+                        break;
+                    case "4":
+                        System.out.println("You selected Mint Ice Cream.");
+                        totalPrice += 13.65;
+                break;
+            default:
+                System.out.println("Invalid dessert selection.");
+        break;
+        }
+    
+            //System.out.println("You are ordering: " + appetizers + drinks + entrée + desserts + ".");
+            //System.out.println("Total Price: $" + totalPrice);
             }
         }
         
