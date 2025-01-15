@@ -12,7 +12,7 @@ public class Menu {
     public static void showMenu(){
         Scanner input = new Scanner(System.in);
         double totalPrice = 0;
-        System.out.print("Enter your age: ");
+        //System.out.print("Enter your age: ");
         int age = input.nextInt(); 
         String juiceChoice = "Juice";
         String alcoholChoice = "Alcohol";
@@ -22,11 +22,13 @@ public class Menu {
         //when i run the code it stops at "Select an appetizer (1-4):" and the code stops so i need to fix this tommorow
         //update, i fixed some things and now when i run my code it outputs the question about age for the alcohol. then it will output the menu in a very ugly way (ill fix the formatting later since its just syso and a bunch of extra lines and what not) then it will say "Select an appetizer(1-4)" and ask for the drink on the same line. it also duplicated the errors
         //i see bugs coming from the switch/case i have inside the main switch/cases ex. the ice cream
+        //update 2: my code doesnt output the question about age anymore since i removed it from the top and left it at the switch/case for the alcohol but it has an empty line when i press enter and doesnt output the menu properly
+        //it doesnt let me enter an age for the alcohol and the switch case for that doesnt work as id like it do
 
         //appetizers
         System.out.println("[1] Garden Salad - contains chicken, tomatoes, cucumbers, read onions. $13.65");
-        System.out.println("[2] Pan seared Scallops - pea purée");
-        System.out.println("[3] Quail Eggs Benedict - contains");
+        System.out.println("[2] Pan seared Scallops");
+        System.out.println("[3] Quail Eggs Benedict ");
         System.out.println("[4] Tuna Tartare");
         System.out.print("Select an appetizer (1-4): ");
         String appetizers = input.nextLine();
@@ -40,10 +42,10 @@ public class Menu {
         String drinks = input.nextLine();
 
         //entrée
-        System.out.println("[1] Pan seared Salmon - contains");
-        System.out.println("[2] Truffle Carbonara - contains");
-        System.out.println("[3] Pan seared Filet Mignon and Butter Poached Lobster - contains");
-        System.out.println("[4] Spicy Shrimp with rice - contains ");
+        System.out.println("[1] Pan seared Salmon");
+        System.out.println("[2] Truffle Carbonara");
+        System.out.println("[3] Pan seared Filet Mignon and Butter Poached Lobster");
+        System.out.println("[4] Spicy Shrimp with rice");
         System.out.print("Select an entrée (1-4): ");
         String entrée = input.nextLine();
 
@@ -55,7 +57,7 @@ public class Menu {
         System.out.print("Select a dessert (1-4): ");
         String desserts = input.nextLine();
 
-        //TODO: add price to the end of the cases
+        //TODO: add price to the end of the cases and to the prints above^^
         switch (appetizers) {
             case "1": 
                 System.out.println("You selected Garden Salad.");
@@ -125,11 +127,12 @@ public class Menu {
                         break;
                     case "4":
                         System.out.println("You selected Fruit punch.");
-            totalPrice += 13.65;
+            totalPrice += 1.50;
                 break;
                 }
             case "4":
-                //figure out how to do switch case inside with the if statements 
+                //figure out how to do switch case inside with the if statements
+                System.out.print("Enter your age: "); 
             if (age >= 19) {
                 System.out.println("You selected Alcohol.");
                 System.out.println("Please select a Alcoholic beverage:");
@@ -140,16 +143,16 @@ public class Menu {
                 //String juiceChoice = input.nextLine();
                 switch (alcoholChoice) {
                     case "1":
-                        System.out.println("You selected Orange.");
+                        System.out.println("You selected Wine.");
                         break;
                     case "2":
-                        System.out.println("You selected Mango.");
+                        System.out.println("You selected Champagne.");
                         break;
                     case "3":
-                        System.out.println("You selected Apple.");
+                        System.out.println("You selected Whisky.");
                         break;
                     case "4":
-                        System.out.println("You selected Fruit punch.");
+                        System.out.println("You selected Cocktail.");
             totalPrice += 13.65;
                 break;
                 }

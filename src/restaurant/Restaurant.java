@@ -8,7 +8,7 @@ package restaurant;
 
  import java.util.Scanner;
 
- public class Restaurant {
+ public class Restaurant extends Menu {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Restaurant, how many people are in your party?"); // will change the name later but for now it is 'Restaurant'
