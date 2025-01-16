@@ -1,4 +1,5 @@
 package restaurant;
+import java.util.Scanner;
 
 /*
  * author: Maria Alampay
@@ -6,15 +7,10 @@ package restaurant;
  * Menu class 
  */
 
-import java.util.Scanner;
-
 public class Menu {
     public static void showMenu(){
         Scanner input = new Scanner(System.in);
         double totalPrice = 0;
-        //System.out.print("Enter your age: ");
-        //int age = input.nextInt();
-        //input.nextLine();  // Flush buffer
         String juiceChoice = "Juice";
         String alcoholChoice = "Alcohol";
         String sodaChoice = "Soda";
@@ -23,6 +19,9 @@ public class Menu {
         //new updates: the menu and whatnot is running fine now but I need to fix the if statements under the switch/case 
 
         //appetizers
+        System.out.println("---The Ivory Lounge Restaurant Menu---");
+        System.out.println("Appetizers:");
+        System.out.println("-------------------");
         System.out.println("[1] Garden Salad - contains chicken, tomatoes, cucumbers, read onions. $13.65");
         System.out.println("[2] Pan seared Scallops");
         System.out.println("[3] Quail Eggs Benedict ");
@@ -31,6 +30,8 @@ public class Menu {
         String appetizers = input.nextLine();
 
         //drinks
+        System.out.println("Drinks:");
+        System.out.println("-------------------");
         System.out.println("[1] Water");
         System.out.println("[2] Soda");
         System.out.println("[3] Juice");
@@ -39,6 +40,8 @@ public class Menu {
         String drinks = input.nextLine();
 
         //entrée
+        System.out.println("Entrées:");
+        System.out.println("-------------------");
         System.out.println("[1] Pan seared Salmon");
         System.out.println("[2] Truffle Carbonara");
         System.out.println("[3] Pan seared Filet Mignon and Butter Poached Lobster");
@@ -47,6 +50,8 @@ public class Menu {
         String entrée = input.nextLine();
 
         //desserts
+        System.out.println("Desserts:");
+        System.out.println("-------------------");
         System.out.println("[1] Chocolate Lava Cake");
         System.out.println("[2] Chocolate Soufflé");
         System.out.println("[3] Creme Brulee");
@@ -129,7 +134,7 @@ public class Menu {
                 System.out.println("You selected Alcohol.");
                 System.out.print("Enter your age: ");
                 int age = input.nextInt();
-                input.nextLine(); // flush 
+                input.nextLine(); // flush buffer
                 if (age >= 19) {
                     System.out.println("Please select a Alcoholic beverage:");
                     System.out.println("[1] Wine");
