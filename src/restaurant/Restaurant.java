@@ -1,4 +1,6 @@
 package restaurant;
+import java.util.Scanner;
+import java.util.Random;
 
 /*
  * author: Maria Alampay!
@@ -6,10 +8,7 @@ package restaurant;
  * Restaurant class 
  */
 
- import java.util.Scanner;
-import java.util.Random;
-
- public class Restaurant extends Menu { //since inheritance "is-a" relationship, does it make sense to use extend or should i be using composition instead
+ public class Restaurant{ 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to The Ivory Lounge, how many people are in your party?"); 
@@ -28,6 +27,7 @@ import java.util.Random;
         System.out.println("Say 'ready' when you are ready to order!");
 
         inp = input.nextLine();
+        //the ! is something cool i learned from google and gpty and I use it in the Menu class too
         while(!inp.equals("ready")){
             System.out.println("Let me know when you are ready to order.");
             inp = input.nextLine();
