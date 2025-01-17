@@ -24,22 +24,8 @@ public class Menu {
         String entréeChoice = "Entrée";
         String dessertChoice = "Dessert";
         
-        //the order stuff below is all underlined red because it's not defined yet and ill fix it tomorrow
-        //create an order
-        Order order = new Order();
+        //TODO: make sure all prices are correct for this to output proper total price
 
-        //add items to the order
-        order.addItem(appetizers);
-        order.addItem(drinks);
-        order.addItem(entrée);
-        order.addItem(desserts);
-
-        //update the total price in the order
-        order.setTotalPrice(totalPrice);
-
-        //generate the ticket
-        order.generateTicket();
-        
         //appetizers
         System.out.println("|The Ivory Lounge Menu|");
         System.out.println("Appetizers:");
@@ -92,6 +78,9 @@ public class Menu {
                 System.out.println("[2] Sprite");
                 System.out.println("[3] Crush");
                 System.out.println("[4] Coke Cola"); 
+                /**
+                 * @param sodaChoice
+                 */
                 sodaChoice = input.nextLine();
                     if (sodaChoice.equals("1")) {
                         System.out.println("You selected Ice Tea.");
@@ -256,19 +245,19 @@ public class Menu {
         switch (entrée) {
             case "1":
             System.out.println("You selected Pan seared Salmon.");
-            totalPrice += 13.65;
+            totalPrice += 34.13;
                 break;
             case "2":
             System.out.println("You selected Truffle Carbonara.");
-            totalPrice += 13.65;
+            totalPrice += 35.33;
                 break;
             case "3":
             System.out.println("You selected Pan seared Filet Mignon and Butter Poached Lobster.");
-            totalPrice += 13.65;
+            totalPrice += 42.97;
                 break;
             case "4":
             System.out.println("You selected Spicy Shrimp with rice.");
-            totalPrice += 13.65;
+            totalPrice += 30.42;
                 break;
             default:
                 System.out.println("Invalid entrée selection.");
@@ -287,15 +276,15 @@ public class Menu {
         switch (desserts) {
             case "1":
             System.out.println("You selected Chocolate Lava Cake.");
-            totalPrice += 13.65;
+            totalPrice += 15.50;
                 break;
             case "2":
             System.out.println("You selected Chocolate Soufflé.");
-            totalPrice += 13.65;
+            totalPrice += 17.10;
                 break;
             case "3":
             System.out.println("You selected Creme Brulee.");
-            totalPrice += 13.65;
+            totalPrice += 12.75;
                 break;
             case "4": 
                 System.out.println("You selected Ice Cream.");
@@ -325,9 +314,25 @@ public class Menu {
                     System.out.println("Invalid dessert selection.");
                     break;
             }
+
+        //create an order
+        Order order = new Order();
+
+        //add items to the order
+        order.addItem(appetizers);
+        order.addItem(drinks);
+        order.addItem(entrée);
+        order.addItem(desserts);
+
+        //update the total price in the order
+        order.setTotalPrice(totalPrice);
+
+        //generate the ticket
+        order.orderTicket();
+        
+        
             
-            //fix this part since it outputs the numbers you chose that correspond to the menu items
-            //the "Choices" should work i think i need to integrate them into the switch cases, im not too sure yet 
+            //fix this part since it outputs the numbers you chose that correspond to the menu items 
             //TODO: on second thought, i think i wanna remove this line below and just have the order class have all the info about the user's order ticket and whatnots
             //System.out.println("You are ordering: " + appetizerChoice + drinkChoice + entréeChoice + dessertChoice + ".");
             //System.out.println("Total Price: $" + totalPrice);
