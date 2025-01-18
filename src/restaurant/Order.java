@@ -14,7 +14,17 @@ public class Order {
     private ArrayList<String> items; //list to store items ordered 
     private double totalPrice; //total price of the order
     private String item;
-    
+
+    // ANSI escape codes for colors (I found this all on google)
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
 
     //constructor
     public Order(){
@@ -33,15 +43,15 @@ public class Order {
 
     // Method to generate the order ticket
     public void orderTicket() {
-        System.out.println("===== ORDER TICKET =====");
-        System.out.println("------------------------");
+        System.out.println(ANSI_BLUE + "===== ORDER TICKET =====" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "------------------------" + ANSI_RESET);
         for (String item : items) {
             System.out.println(item);
         }
-        System.out.println("------------------------");
-        System.out.println("Total Price: $" + totalPrice);
-        System.out.println("========================");
-        System.out.println("Order ticket generated.");
+        System.out.println(ANSI_YELLOW + "------------------------" + ANSI_RESET);
+        System.out.printf(ANSI_RED + "Total Price: $%.2f%n", totalPrice);
+        System.out.println(ANSI_YELLOW + "========================" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "Order ticket generated." + ANSI_RESET);
 
     }
 
@@ -63,7 +73,8 @@ public class Order {
             sb.append(item).append("\n");
         }
         sb.append("------------------------\n");
-        sb.append("Total Price: $").append(totalPrice).append("\n");
+        //gpty helped me with the formatting of the total price so that it prints to 2 decimal places
+        sb.append(String.format("Total Price: $%.2f%n", totalPrice));
         sb.append("========================\n");
             return sb.toString();
         }
