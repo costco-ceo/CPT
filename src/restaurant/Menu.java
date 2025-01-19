@@ -44,10 +44,10 @@ public class Menu {
         System.out.println(ANSI_CYAN + "|The Ivory Lounge Menu|" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "Appetizers:" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "-------------------" + ANSI_RESET);
-        System.out.println(ANSI_BLUE + "[1] Garden Salad - contains chicken, tomatoes, cucumbers, read onions. $15.65" + ANSI_RESET);
-        System.out.println(ANSI_BLUE + "[2] Pan seared Scallops - $19.89" + ANSI_RESET);
-        System.out.println(ANSI_BLUE + "[3] Quail Eggs Benedict - $16.55" + ANSI_RESET);
-        System.out.println(ANSI_BLUE + "[4] Tuna Tartare - $19.20" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "[1] Garden Salad - Contains: Chicken, tomatoes, cucumbers, read onions. $15.65" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "[2] Pan seared Scallops - Contains: Scallops, butter, olive oil, garlic, salt, pepper, lemon. $19.89" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "[3] Quail Eggs Benedict - Contains: Quail eggs, English muffin, Canadian bacon, hollandaise sauce, butter, lemon, vinegar, salt, pepper. $16.55" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "[4] Tuna Tartare - Contains: Ahi tuna, avocado, soy sauce, sesame oil, ginger, cilantro, lime, sesame seeds, cucumber, chili. $19.20" + ANSI_RESET);
         System.out.print(ANSI_YELLOW + "Select an appetizer (1-4): "+ ANSI_RESET);
         appetizers = input.nextLine();
         String appetizerChoice = appetizers;
@@ -80,9 +80,9 @@ public class Menu {
         System.out.println(ANSI_YELLOW + "Drinks:" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "-------------------" + ANSI_RESET);
         System.out.println(ANSI_GREEN + "[1] Water - $0.00" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "[2] Soda - $1.50" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "[3] Juice - $1.20" + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "[4] Alcohol - *prices vary*" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[2] Soda - Ice Tea, Sprite, Crush, Coke Cola. $1.50" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[3] Juice - Orange, Mango, Apple, Fruit Punch. $1.20" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "[4] Alcohol - Wine, Champagne, Whisky, Cocktail. *prices vary*" + ANSI_RESET);
         System.out.print(ANSI_YELLOW + "Select a drink (1-4): " + ANSI_RESET);
         drinks = input.nextLine();
         String drinkChoice = drinks;
@@ -285,10 +285,10 @@ public class Menu {
         // Entrée
         System.out.println(ANSI_YELLOW + "Entrées:" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "-------------------" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "[1] Pan seared Salmon - $34.13" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "[2] Truffle Carbonara - $35.33" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "[3] Pan seared Filet Mignon and Butter Poached Lobster - $42.97" + ANSI_RESET);
-        System.out.println(ANSI_CYAN + "[4] Spicy Shrimp with rice - $30.42" + ANSI_RESET);
+        System.out.println(ANSI_CYAN + "[1] Pan seared Salmon - Contains: Salmon, olive oil, butter, garlic, lemon, salt, pepper, fresh herbs. $34.13" + ANSI_RESET);
+        System.out.println(ANSI_CYAN + "[2] Truffle Carbonara - Contains: Spaghetti, eggs, pancetta, Parmesan cheese, black truffle oil, garlic, black pepper, butter. $35.33" + ANSI_RESET);
+        System.out.println(ANSI_CYAN + "[3] Pan seared Filet Mignon and Butter Poached Lobster - Contains: Filet mignon, lobster tail, butter, garlic, thyme, rosemary, olive oil, salt, pepper, lemon. $42.97" + ANSI_RESET);
+        System.out.println(ANSI_CYAN + "[4] Spicy Shrimp with rice - Contains: Shrimp, jasmine rice, garlic, chili, olive oil, soy sauce, lime, ginger, cilantro, salt, pepper. $30.42" + ANSI_RESET);
         System.out.print(ANSI_YELLOW + "Select an entrée (1-4): " + ANSI_RESET);
         entrée = input.nextLine();
         String entréeChoice = entrée;
@@ -321,10 +321,10 @@ public class Menu {
         // Desserts
         System.out.println(ANSI_YELLOW + "Desserts:" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "-------------------" + ANSI_RESET);
-        System.out.println(ANSI_PURPLE + "[1] Chocolate Lava Cake - $15.50" + ANSI_RESET);
-        System.out.println(ANSI_PURPLE + "[2] Chocolate Soufflé - $17.10" + ANSI_RESET);
-        System.out.println(ANSI_PURPLE + "[3] Creme Brulee - $12.75" + ANSI_RESET);
-        System.out.println(ANSI_PURPLE + "[4] Ice Cream - $8.10" + ANSI_RESET);
+        System.out.println(ANSI_PURPLE + "[1] Chocolate Lava Cake - Contains: Dark chocolate, butter, sugar, eggs, flour, vanilla extract, salt. $15.50" + ANSI_RESET);
+        System.out.println(ANSI_PURPLE + "[2] Chocolate Soufflé - Contains: Dark chocolate, eggs, sugar, butter, flour, milk, vanilla extract, salt. $17.10" + ANSI_RESET);
+        System.out.println(ANSI_PURPLE + "[3] Creme Brulee - Contains: Heavy cream, egg yolks, sugar, vanilla bean, salt. $12.75" + ANSI_RESET);
+        System.out.println(ANSI_PURPLE + "[4] Ice Cream - Earl Grey, Peach Basil, Match Green Tea, Roasted Pistachio. $8.10" + ANSI_RESET);
         System.out.print(ANSI_YELLOW + "Select a dessert (1-4): " + ANSI_RESET);
         desserts = input.nextLine(); 
         String dessertChoice = desserts;
