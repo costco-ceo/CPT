@@ -52,6 +52,15 @@ public class Order {
     }
 
     /**
+     * Gets the order number.
+     * 
+     * @return The order number.
+     */
+    public int getOrderNumber() {
+        return orderNumber;
+    }
+
+    /**
      * Adds an item to the order. 
      * 
      * @param item The item to be added to the order.
